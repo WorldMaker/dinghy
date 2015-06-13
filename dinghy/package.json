@@ -11,5 +11,30 @@
     "express": "3.4.4",
     "jade": "*",
     "stylus": "*"
+  },
+  "jspm": {
+    "directories": {
+      "baseURL": "public"
+    },
+    "dependencies": {
+      "dbtek/bootswatch-dist": "github:dbtek/bootswatch-dist@3.3.4-cerulean",
+      "jquery": "github:components/jquery@^2.1.4"
+    },
+    "devDependencies": {
+      "babel": "npm:babel-core@^5.1.13",
+      "babel-runtime": "npm:babel-runtime@^5.1.13",
+      "core-js": "npm:core-js@^0.9.4"
+    },
+    "overrides": {
+      "github:dbtek/bootswatch-dist@3.3.4-cerulean": {
+        "shim": {
+          "js/bootstrap.min": {
+            "deps": [
+              "jquery"
+            ]
+          }
+        }
+      }
+    }
   }
 }

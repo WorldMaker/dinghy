@@ -2,6 +2,36 @@
 html
   head
     title= title
-    link(rel='stylesheet', href='/stylesheets/style.css')
+    meta(name="viewport", content="width=device-width, initial-scale=1")
+    link(rel='stylesheet', href='/jspm_packages/github/dbtek/bootswatch-dist@3.3.4-cerulean/css/bootstrap.min.css')
+    script(type='text/javascript', src='/jspm_packages/system.js')
+    script(type='text/javascript', src='/config.js')
+    script(type='text/javascript').
+      System.import('app');
   body
-    block content
+    .navbar.navbar-default.navbar-static-top(role='navigation')
+      .container
+          .navbar-header
+            button.navbar-toggle(type='button', data-toggle='collapse', data-target='.navbar-collapse')
+              span.sr-only Toggle navigation
+              span.icon-bar
+              span.icon-bar
+              span.icon-bar
+            a.navbar-brand(href='#') Dinghies & Dolphins
+          .navbar-collapse.collapse
+            ul.nav.navbar-nav
+              // TODO: Componentize this
+              - var obj = { 'home':'Home', 'about':'About' }
+                - each val, key in obj
+                  - if (id == key)
+                    li.active
+                      a(href='#{key}') #{val}
+                  - else            
+                    li
+                      a(href='#{key}') #{val}
+
+    .container
+      block content
+
+    //footer.footer.container
+    //  p Dinghies & Dolphins

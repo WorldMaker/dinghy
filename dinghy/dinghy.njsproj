@@ -34,28 +34,31 @@
   </PropertyGroup>
   <ItemGroup>
     <TypeScriptCompile Include="app.ts" />
+    <TypeScriptCompile Include="public\app.ts" />
     <TypeScriptCompile Include="routes\index.ts" />
     <TypeScriptCompile Include="routes\user.ts" />
-    <TypeScriptCompile Include="Scripts\typings\express\express.d.ts" />
-    <TypeScriptCompile Include="Scripts\typings\node\node.d.ts" />
-    <TypeScriptCompile Include="Scripts\typings\stylus\stylus.d.ts" />
     <Content Include="package.json" />
-    <Content Include="public\stylesheets\style.styl" />
+    <Content Include="tsd.json" />
     <Content Include="views\index.jade" />
     <Content Include="views\layout.jade" />
+    <TypeScriptCompile Include="typings\express\express.d.ts" />
+    <TypeScriptCompile Include="typings\jquery\jquery.d.ts" />
+    <TypeScriptCompile Include="typings\node\node.d.ts" />
+    <TypeScriptCompile Include="typings\stylus\stylus.d.ts" />
+    <TypeScriptCompile Include="typings\tsd.d.ts" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="public\" />
-    <Folder Include="public\images\" />
-    <Folder Include="public\javascripts\" />
-    <Folder Include="public\stylesheets\" />
     <Folder Include="routes\" />
-    <Folder Include="Scripts\" />
-    <Folder Include="Scripts\typings\" />
-    <Folder Include="Scripts\typings\express\" />
-    <Folder Include="Scripts\typings\node\" />
-    <Folder Include="Scripts\typings\stylus\" />
+    <Folder Include="typings\" />
+    <Folder Include="typings\express\" />
+    <Folder Include="typings\jquery\" />
+    <Folder Include="typings\node\" />
+    <Folder Include="typings\stylus\" />
     <Folder Include="views\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="public\config.js" />
   </ItemGroup>
   <!-- Do not delete the following Import Project.  While this appears to do nothing it is a marker for setting TypeScript properties before our import that depends on them. -->
   <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)\TypeScript\Microsoft.TypeScript.targets" Condition="False" />

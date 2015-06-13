@@ -1,0 +1,15 @@
+{
+  "name": "dinghy",
+  "version": "0.0.0",
+  "description": "dinghy",
+  "main": "app.js",
+  "author": {
+    "name": "Max",
+    "email": ""
+  },
+  "dependencies": {
+    "express": "3.4.4",
+    "jade": "*",
+    "stylus": "*"
+  }
+}

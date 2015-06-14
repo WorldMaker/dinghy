@@ -7,6 +7,12 @@ import routes = require('./routes/index');
 import user = require('./routes/user');
 import http = require('http');
 import path = require('path');
+import mongoose = require('mongoose');
+
+// connect to Mongo
+mongoose.connect('mongodb://localhost/test');
+var db = mongoose.connection;
+db.on('error', console.error.bind(console, 'connection error:')); // TODO: Something smarter than this?
 
 var app = express();
 

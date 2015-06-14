@@ -34,7 +34,9 @@
   </PropertyGroup>
   <ItemGroup>
     <TypeScriptCompile Include="app.ts" />
+    <TypeScriptCompile Include="model\character.ts" />
     <TypeScriptCompile Include="public\app.ts" />
+    <TypeScriptCompile Include="public\schema\character.ts" />
     <TypeScriptCompile Include="routes\index.ts" />
     <TypeScriptCompile Include="routes\user.ts" />
     <Content Include="package.json" />
@@ -48,7 +50,9 @@
     <TypeScriptCompile Include="typings\tsd.d.ts" />
   </ItemGroup>
   <ItemGroup>
+    <Folder Include="model\" />
     <Folder Include="public\" />
+    <Folder Include="public\schema\" />
     <Folder Include="routes\" />
     <Folder Include="typings\" />
     <Folder Include="typings\express\" />

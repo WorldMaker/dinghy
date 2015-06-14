@@ -192,3 +192,4 @@ ModelManifest.xml
 *.map
 /dinghy/.ntvs_analysis.dat
 /dinghy/public/stylesheets/style.css
+/dinghy/public/jspm_packages

@@ -43,10 +43,14 @@
     <Content Include="tsd.json" />
     <Content Include="views\index.jade" />
     <Content Include="views\layout.jade" />
+    <TypeScriptCompile Include="typings\body-parser\body-parser.d.ts" />
+    <TypeScriptCompile Include="typings\errorhandler\errorhandler.d.ts" />
     <TypeScriptCompile Include="typings\express\express.d.ts" />
     <TypeScriptCompile Include="typings\jquery\jquery.d.ts" />
+    <TypeScriptCompile Include="typings\method-override\method-override.d.ts" />
+    <TypeScriptCompile Include="typings\mongoose\mongoose.d.ts" />
+    <TypeScriptCompile Include="typings\morgan\morgan.d.ts" />
     <TypeScriptCompile Include="typings\node\node.d.ts" />
-    <TypeScriptCompile Include="typings\stylus\stylus.d.ts" />
     <TypeScriptCompile Include="typings\tsd.d.ts" />
   </ItemGroup>
   <ItemGroup>
@@ -55,10 +59,14 @@
     <Folder Include="public\schema\" />
     <Folder Include="routes\" />
     <Folder Include="typings\" />
+    <Folder Include="typings\body-parser\" />
+    <Folder Include="typings\errorhandler\" />
     <Folder Include="typings\express\" />
     <Folder Include="typings\jquery\" />
+    <Folder Include="typings\method-override\" />
+    <Folder Include="typings\mongoose\" />
+    <Folder Include="typings\morgan\" />
     <Folder Include="typings\node\" />
-    <Folder Include="typings\stylus\" />
     <Folder Include="views\" />
   </ItemGroup>
   <ItemGroup>

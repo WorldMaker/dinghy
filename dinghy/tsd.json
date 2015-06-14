@@ -11,13 +11,22 @@
     "node/node.d.ts": {
       "commit": "066819c65ff561ca109955e0b725c253e243f0a2"
     },
-    "stylus/stylus.d.ts": {
-      "commit": "066819c65ff561ca109955e0b725c253e243f0a2"
-    },
     "express/express.d.ts": {
       "commit": "066819c65ff561ca109955e0b725c253e243f0a2"
     },
     "mongoose/mongoose.d.ts": {
+      "commit": "066819c65ff561ca109955e0b725c253e243f0a2"
+    },
+    "errorhandler/errorhandler.d.ts": {
+      "commit": "066819c65ff561ca109955e0b725c253e243f0a2"
+    },
+    "body-parser/body-parser.d.ts": {
+      "commit": "066819c65ff561ca109955e0b725c253e243f0a2"
+    },
+    "morgan/morgan.d.ts": {
+      "commit": "066819c65ff561ca109955e0b725c253e243f0a2"
+    },
+    "method-override/method-override.d.ts": {
       "commit": "066819c65ff561ca109955e0b725c253e243f0a2"
     }
   }

@@ -1,4 +1,8 @@
 ﻿import express = require('express');
+import bodyParser = require('body-parser');
+import errorhandler = require('errorhandler');
+import methodOverride = require('method-override');
+import morgan = require('morgan');
 import routes = require('./routes/index');
 import user = require('./routes/user');
 import http = require('http');
@@ -10,20 +14,23 @@ var app = express();
 app.set('port', process.env.PORT || 3000);
 app.set('views', path.join(__dirname, 'views'));
 app.set('view engine', 'jade');
-app.use(express.favicon());
-app.use(express.logger('dev'));
-app.use(express.json());
-app.use(express.urlencoded());
-app.use(express.methodOverride());
-app.use(app.router);
 
-import stylus = require('stylus');
-app.use(stylus.middleware(path.join(__dirname, 'public')));
+// TODO: npm install serve-favicon; was app.use(express.favicon());
+
+// TODO: Determine if should use route-specific body parsing
+app.use(bodyParser.urlencoded({
+    extended: false
+}));
+app.use(bodyParser.json());
+
+app.use(morgan('dev'));
+app.use(methodOverride('X-HTTP-Method-Override'));
+
 app.use(express.static(path.join(__dirname, 'public')));
 
 // development only
 if ('development' == app.get('env')) {
-    app.use(express.errorHandler());
+    app.use(errorhandler());
 }
 
 app.get('/', routes.index);

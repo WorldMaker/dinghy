@@ -28,6 +28,15 @@
     },
     "method-override/method-override.d.ts": {
       "commit": "066819c65ff561ca109955e0b725c253e243f0a2"
+    },
+    "passport/passport.d.ts": {
+      "commit": "3e117d8c9ddf6443d7ed71a74f6bc8b6bcd36077"
+    },
+    "jsonwebtoken/jsonwebtoken.d.ts": {
+      "commit": "3e117d8c9ddf6443d7ed71a74f6bc8b6bcd36077"
+    },
+    "cookie-parser/cookie-parser.d.ts": {
+      "commit": "3e117d8c9ddf6443d7ed71a74f6bc8b6bcd36077"
     }
   }
 }

@@ -6,3 +6,6 @@
 /// <reference path="body-parser/body-parser.d.ts" />
 /// <reference path="morgan/morgan.d.ts" />
 /// <reference path="method-override/method-override.d.ts" />
+/// <reference path="passport/passport.d.ts" />
+/// <reference path="jsonwebtoken/jsonwebtoken.d.ts" />
+/// <reference path="cookie-parser/cookie-parser.d.ts" />

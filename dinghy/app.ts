@@ -6,11 +6,14 @@ import methodOverride = require('method-override');
 import morgan = require('morgan');
 import routes = require('./routes/index');
 import user = require('./routes/user');
+import fs = require('fs');
 import http = require('http');
 import path = require('path');
+import Q = require('q');
 import mongoose = require('mongoose');
 import passport = require('passport');
 import boatAuth = require('passport-boat');
+import authUser = require('model/user');
 
 // connect to Mongo
 mongoose.connect('mongodb://localhost/test');
@@ -39,12 +42,23 @@ app.use(methodOverride('X-HTTP-Method-Override'));
 
 app.use(express.static(path.join(__dirname, 'public')));
 
-passport.use(new boatAuth.BoatAuthStrategy({ secretOrKey: null },
-    (jwt, done) => {
-        // TODO
-    }));
+var boatAuthKey = Q.nfcall<string>(fs.readFile, path.join(__dirname, 'boatauth.pem'), 'utf-8');
 
-app.use(passport.initialize());
+var boatAuthStrat = boatAuthKey.then(key => {
+    passport.use(new boatAuth.BoatAuthStrategy({ secretOrKey: key },
+        (jwt, done) => {
+            (<MongooseFindOrCreatable>(<any>authUser)).findOrCreate({ username: jwt.sub },(err, user, created) => {
+                if (err) {
+                    done(err);
+                } else {
+                    // TODO: Could use something like: user.token = jwt.token;
+                    done(null, user);
+                }
+            });
+        }));
+
+    app.use(passport.initialize());
+});
 
 // development only
 if ('development' == app.get('env')) {
@@ -54,6 +68,6 @@ if ('development' == app.get('env')) {
 app.get('/', routes.index);
 app.get('/users', user.list);
 
-http.createServer(app).listen(app.get('port'), function () {
-    console.log('Express server listening on port ' + app.get('port'));
+boatAuthStrat.then(() => {
+    http.createServer(app).listen(app.get('port'), () => console.log('Express server listening on port ' + app.get('port')));
 });

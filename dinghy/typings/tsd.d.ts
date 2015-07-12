@@ -9,3 +9,4 @@
 /// <reference path="passport/passport.d.ts" />
 /// <reference path="jsonwebtoken/jsonwebtoken.d.ts" />
 /// <reference path="cookie-parser/cookie-parser.d.ts" />
+/// <reference path="q/Q.d.ts" />

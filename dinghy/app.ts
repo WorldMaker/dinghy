@@ -9,7 +9,7 @@ import user = require('./routes/user');
 import fs = require('fs');
 import http = require('http');
 import path = require('path');
-import Q = require('q');
+import pr = require('promise-ring');
 import mongoose = require('mongoose');
 import passport = require('passport');
 import boatAuth = require('passport-boat');
@@ -42,7 +42,7 @@ app.use(methodOverride('X-HTTP-Method-Override'));
 
 app.use(express.static(path.join(__dirname, 'public')));
 
-var boatAuthKey = Q.nfcall<string>(fs.readFile, path.join(__dirname, 'boatauth.pem'), 'utf-8');
+var boatAuthKey = pr.call<string>(fs.readFile, path.join(__dirname, 'boatauth.pem'), 'utf-8');
 
 var boatAuthStrat = boatAuthKey.then(key => {
     passport.use(new boatAuth.BoatAuthStrategy({ secretOrKey: key },

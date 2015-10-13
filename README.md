@@ -7,6 +7,6 @@ Dinghy is a web app for facillitating a week long, collaborative "Dinghies & Dol
 Don't forget you probably need to install the prerequisites:
 
 ```bash
-$ npm install  # Back-end NodeJS stuff and JSPM dev-time needs
-$ jspm install # Front-end In Browser stuff like System.js
+dinghy$ npm install  # Back-end NodeJS stuff and JSPM dev-time needs
+dinghy/public$ jspm install # Front-end In Browser stuff like System.js
 ```

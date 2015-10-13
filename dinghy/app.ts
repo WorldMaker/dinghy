@@ -10,15 +10,13 @@ import fs = require('fs');
 import http = require('http');
 import path = require('path');
 import pr = require('promise-ring');
-import mongoose = require('mongoose');
 import passport = require('passport');
-import boatAuth = require('passport-boat');
-import authUser = require('model/user');
+import boatAuth = require('./passport-boat');
+import authUser from './model/user'
+import { connect } from 'camo'
 
 // connect to Mongo
-mongoose.connect('mongodb://localhost/test');
-var db = mongoose.connection;
-db.on('error', console.error.bind(console, 'connection error:')); // TODO: Something smarter than this?
+connect('mongodb://localhost/test').then(db => db.on('error', console.error.bind(console, 'connection error:'))) // TODO: Something smarter than this?
 
 var app = express();
 
@@ -47,15 +45,9 @@ var boatAuthKey = pr.call<string>(fs.readFile, path.join(__dirname, 'boatauth.pe
 var boatAuthStrat = boatAuthKey.then(key => {
     passport.use(new boatAuth.BoatAuthStrategy({ secretOrKey: key },
         (jwt, done) => {
-            (<MongooseFindOrCreatable>(<any>authUser)).findOrCreate({ username: jwt.sub },(err, user, created) => {
-                if (err) {
-                    done(err);
-                } else {
-                    // TODO: Could use something like: user.token = jwt.token;
-                    done(null, user);
-                }
-            });
-        }));
+            authUser.loadOneAndUpdate({ username: jwt.sub }, { upsert: true })
+                .then(user => done(null, user), err => done(err))
+        }))
 
     app.use(passport.initialize());
 });

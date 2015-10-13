@@ -1,6 +1,18 @@
-﻿import mongoose = require('mongoose');
-import schema = require('public/schema/character');
+﻿import { Document } from 'camo'
 
-var character = mongoose.model('Character', schema);
+export default class Character extends Document {
+    name: String
+    description: String
+    hp: Number
+    maxhp: Number
 
-export = character;
+    constructor() {
+        super('Character')
+        this.schema({
+            name: String,
+            description: String,
+            hp: Number,
+            maxhp: Number,
+        })
+    }
+}

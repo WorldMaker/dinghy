@@ -1,8 +1,16 @@
-﻿import mongoose = require('mongoose');
-import schema = require('public/schema/user');
-import mongooseFindOrCreate = require('mongoose-findorcreate');
+﻿import { Document } from 'camo'
 
-schema.plugin(mongooseFindOrCreate);
-var user = mongoose.model('User', schema);
+export default class User extends Document {
+    username: String
+    is_admin: Boolean
+    is_dm: Boolean
 
-export = user;
+    constructor() {
+        super('User')
+        this.schema({
+            username: String,
+            is_admin: Boolean,
+            is_dm: Boolean,
+        })
+    }
+}

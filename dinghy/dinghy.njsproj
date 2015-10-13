@@ -38,8 +38,6 @@
     <TypeScriptCompile Include="model\user.ts" />
     <TypeScriptCompile Include="passport-boat.ts" />
     <TypeScriptCompile Include="public\app.ts" />
-    <TypeScriptCompile Include="public\schema\character.ts" />
-    <TypeScriptCompile Include="public\schema\user.ts" />
     <TypeScriptCompile Include="routes\index.ts" />
     <TypeScriptCompile Include="routes\user.ts" />
     <Content Include="boatauth.pem" />
@@ -49,6 +47,7 @@
     <Content Include="views\index.jade" />
     <Content Include="views\layout.jade" />
     <TypeScriptCompile Include="typings\body-parser\body-parser.d.ts" />
+    <TypeScriptCompile Include="typings\camo.d.ts" />
     <TypeScriptCompile Include="typings\cookie-parser\cookie-parser.d.ts" />
     <TypeScriptCompile Include="typings\errorhandler\errorhandler.d.ts" />
     <TypeScriptCompile Include="typings\es6-promise\es6-promise.d.ts" />
@@ -56,8 +55,6 @@
     <TypeScriptCompile Include="typings\jquery\jquery.d.ts" />
     <TypeScriptCompile Include="typings\jsonwebtoken\jsonwebtoken.d.ts" />
     <TypeScriptCompile Include="typings\method-override\method-override.d.ts" />
-    <TypeScriptCompile Include="typings\mongoose-findorcreate.d.ts" />
-    <TypeScriptCompile Include="typings\mongoose\mongoose.d.ts" />
     <TypeScriptCompile Include="typings\morgan\morgan.d.ts" />
     <TypeScriptCompile Include="typings\node\node.d.ts" />
     <TypeScriptCompile Include="typings\passport-jwt.d.ts" />
@@ -68,7 +65,6 @@
   <ItemGroup>
     <Folder Include="model\" />
     <Folder Include="public\" />
-    <Folder Include="public\schema\" />
     <Folder Include="routes\" />
     <Folder Include="typings\" />
     <Folder Include="typings\body-parser\" />
@@ -79,7 +75,6 @@
     <Folder Include="typings\jquery\" />
     <Folder Include="typings\jsonwebtoken\" />
     <Folder Include="typings\method-override\" />
-    <Folder Include="typings\mongoose\" />
     <Folder Include="typings\morgan\" />
     <Folder Include="typings\node\" />
     <Folder Include="typings\passport\" />

@@ -22,9 +22,10 @@
 
         validate();
 
-        create(data: any): BaseDocument;
+        create(data: any): this;
         populate(): Promise<{}>;
-        static populate(docs: BaseDocument | BaseDocument[]): Promise<BaseDocument | BaseDocument[]>;
+        static populate<T>(docs: T): Promise<T>;
+        static potulate<T>(docs: T[]): Promise<T[]>;
         getDefault(schemaProp: string): any;
     }
 
@@ -35,17 +36,17 @@
         delete(): Promise<{}>;
         static deleteOne(query: CamoQuery): Promise<{}>;
         static deleteMany(query: CamoQuery): Promise<{}>;
-        static loadOne(query: CamoQuery, options?: {
+        static loadOne<T>(query: CamoQuery, options?: {
             populate?: boolean,
-        }): Promise<Document>;
-        static loadOneAndUpdate(query: CamoQuery, values: any, options?: {
+        }): Promise<T>;
+        static loadOneAndUpdate<T>(query: CamoQuery, values: any, options?: {
             populate?: boolean,
             upsert?: boolean,
-        }): Promise<Document>;
-        static loadOneAndDelete(query: CamoQuery, options?: {}): Promise<Document>;
-        static loadMany(query: CamoQuery, options?: {
+        }): Promise<T>;
+        static loadOneAndDelete<T>(query: CamoQuery, options?: {}): Promise<T>;
+        static loadMany<T>(query: CamoQuery, options?: {
             populate?: boolean,
-        }): Promise<Document[]>;
+        }): Promise<T[]>;
         static count(query: CamoQuery): Promise<number>;
         static clearCollection(): Promise<{}>;
     }

@@ -1,13 +1,14 @@
 {
   "compilerOptions": {
-    "module": "commonjs",
+    "module": "es2015",
     "target": "es2015",
     "noImplicitAny": false,
     "sourceMap": true
   },
-  "exclude": [
-    "public",
-    "typings/browser.d.ts",
-    "typings/browser"
+  "filesGlob": [
+    "./**/*.ts"
+  ],
+  "files": [
+    "../typings/browser.d.ts"
   ]
 }

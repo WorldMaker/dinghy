@@ -1,0 +1,19 @@
+{
+  "ambientDependencies": {
+    "body-parser": "github:DefinitelyTyped/DefinitelyTyped/body-parser/body-parser.d.ts#066819c65ff561ca109955e0b725c253e243f0a2",
+    "cookie-parser": "github:DefinitelyTyped/DefinitelyTyped/cookie-parser/cookie-parser.d.ts#3e117d8c9ddf6443d7ed71a74f6bc8b6bcd36077",
+    "errorhandler": "github:DefinitelyTyped/DefinitelyTyped/errorhandler/errorhandler.d.ts#066819c65ff561ca109955e0b725c253e243f0a2",
+    "express": "github:DefinitelyTyped/DefinitelyTyped/express/express.d.ts#066819c65ff561ca109955e0b725c253e243f0a2",
+    "jquery": "github:DefinitelyTyped/DefinitelyTyped/jquery/jquery.d.ts#066819c65ff561ca109955e0b725c253e243f0a2",
+    "jsonwebtoken": "github:DefinitelyTyped/DefinitelyTyped/jsonwebtoken/jsonwebtoken.d.ts#3e117d8c9ddf6443d7ed71a74f6bc8b6bcd36077",
+    "method-override": "github:DefinitelyTyped/DefinitelyTyped/method-override/method-override.d.ts#066819c65ff561ca109955e0b725c253e243f0a2",
+    "morgan": "github:DefinitelyTyped/DefinitelyTyped/morgan/morgan.d.ts#066819c65ff561ca109955e0b725c253e243f0a2",
+    "node": "github:DefinitelyTyped/DefinitelyTyped/node/node.d.ts#066819c65ff561ca109955e0b725c253e243f0a2",
+    "passport": "github:DefinitelyTyped/DefinitelyTyped/passport/passport.d.ts#3e117d8c9ddf6443d7ed71a74f6bc8b6bcd36077"
+  },
+  "dependencies": {
+    "camo": "github:IndefinitivelyTyped/camo",
+    "passport-jwt": "github:IndefinitivelyTyped/passport-jwt",
+    "promise-ring": "github:IndefinitivelyTyped/promise-ring"
+  }
+}

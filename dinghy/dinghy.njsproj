@@ -42,42 +42,17 @@
     <TypeScriptCompile Include="routes\user.ts" />
     <Content Include="boatauth.pem" />
     <Content Include="package.json" />
+    <Content Include="public\tsconfig.json" />
     <Content Include="tsconfig.json" />
-    <Content Include="tsd.json" />
+    <Content Include="typings.json" />
     <Content Include="views\index.jade" />
     <Content Include="views\layout.jade" />
-    <TypeScriptCompile Include="typings\body-parser\body-parser.d.ts" />
-    <TypeScriptCompile Include="typings\camo.d.ts" />
-    <TypeScriptCompile Include="typings\cookie-parser\cookie-parser.d.ts" />
-    <TypeScriptCompile Include="typings\errorhandler\errorhandler.d.ts" />
-    <TypeScriptCompile Include="typings\es6-promise\es6-promise.d.ts" />
-    <TypeScriptCompile Include="typings\express\express.d.ts" />
-    <TypeScriptCompile Include="typings\jquery\jquery.d.ts" />
-    <TypeScriptCompile Include="typings\jsonwebtoken\jsonwebtoken.d.ts" />
-    <TypeScriptCompile Include="typings\method-override\method-override.d.ts" />
-    <TypeScriptCompile Include="typings\morgan\morgan.d.ts" />
-    <TypeScriptCompile Include="typings\node\node.d.ts" />
-    <TypeScriptCompile Include="typings\passport-jwt.d.ts" />
-    <TypeScriptCompile Include="typings\passport\passport.d.ts" />
-    <TypeScriptCompile Include="typings\promise-ring.d.ts" />
-    <TypeScriptCompile Include="typings\tsd.d.ts" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="model\" />
     <Folder Include="public\" />
     <Folder Include="routes\" />
     <Folder Include="typings\" />
-    <Folder Include="typings\body-parser\" />
-    <Folder Include="typings\cookie-parser\" />
-    <Folder Include="typings\errorhandler\" />
-    <Folder Include="typings\es6-promise\" />
-    <Folder Include="typings\express\" />
-    <Folder Include="typings\jquery\" />
-    <Folder Include="typings\jsonwebtoken\" />
-    <Folder Include="typings\method-override\" />
-    <Folder Include="typings\morgan\" />
-    <Folder Include="typings\node\" />
-    <Folder Include="typings\passport\" />
     <Folder Include="views\" />
   </ItemGroup>
   <ItemGroup>
